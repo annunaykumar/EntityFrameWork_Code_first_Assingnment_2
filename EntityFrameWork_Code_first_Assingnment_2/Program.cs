@@ -17,14 +17,14 @@ namespace EntityFrameWork_Code_first_Assingnment_2
             do
             {
                 Console.WriteLine("1.AddOrder\n2.AddBook\n3.GetAllBook\n4.GetBookByBookId\n5.DeleteBook" +
-                    "\n6.EditEmployees");
+                    "\n6.EditBook");
                 Console.WriteLine("Enter your choice");
                 int ch = int.Parse(Console.ReadLine());
                 switch (ch)
                 {
                     case 1:
                         {
-                            Order order = new Order() { OrderId = 15, OrderDate = new DateTime(2022, 09, 18), BookId = 10 };
+                            Order order = new Order() { OrderId = 16, OrderDate = new DateTime(2022, 05, 14), BookId = 11 };
                             Repository.AddOrder(order);
                         }
                         break;
@@ -34,9 +34,9 @@ namespace EntityFrameWork_Code_first_Assingnment_2
                             Book book = new Book();
                             Console.WriteLine("Enter BookId");
                             book.BookId = int.Parse(Console.ReadLine());
-                            book.BookName = "Harry Potter";
-                            book.Price = 34000;
-                            book.Author = "J.K Rolling";
+                            book.BookName = "Game Of Thrones";
+                            book.Price = 24000;
+                            book.Author = "David Benioff";
                             bookRepository.AddBook(book);
                         }
                         break;
